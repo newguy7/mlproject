@@ -1,0 +1,6 @@
+pandas
+numpy
+matplotlib
+seaborn
+#automatically trigger setup.py
+-e .
