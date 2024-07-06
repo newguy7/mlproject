@@ -1,5 +1,9 @@
 import sys
-import logging
+import os
+# from src.logger import logging
+
+# Add src directory to the path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 def error_message_detail(error, error_detail:sys):
     _,_,exc_tb = error_detail.exc_info()
@@ -15,6 +19,5 @@ class CustomException(Exception):
         self.error_message = error_message_detail(error_message,error_detail)
         
     def __str__(self):
-        return self.error_message   
-       
-        
+        return self.error_message       
+
